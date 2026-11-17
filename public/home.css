@@ -386,3 +386,38 @@ body{overflow-x:hidden;max-width:100%;position:relative}
 main,section,footer{max-width:100%}
 .works{overflow-x:clip;overflow-y:visible}
 img,video,svg{max-width:100%}
+
+/* ---- Menu masqué pendant le chargement (jusqu'à la fin de l'intro) ---- */
+.nb{transition:opacity .6s var(--e),visibility .6s,transform .5s var(--e),background .4s,color .4s}
+html.gs:not(.ready):has(#intro) .nb,html.gs:not(.ready):has(#intro) .menu{opacity:0!important;visibility:hidden!important;pointer-events:none!important}
+
+/* ---- Mobile : plus d'air ---- */
+@media (max-width:899px){
+:root{--pad:22px;--gut:16px;--sec:clamp(88px,12vh,130px)}
+body{line-height:1.6}
+.sh{margin-bottom:36px;padding-top:16px}
+.w-top p{font-size:16px;line-height:1.6;padding:0 6px}
+.works{padding-bottom:12px}
+.sc-grid{gap:20px}
+.sc-tx{padding:26px 24px 28px;gap:18px}
+.sc p,.steps p{font-size:16px;line-height:1.6}
+.sc-tags{gap:8px;padding-top:18px}
+.sc-tags li{height:32px;padding:0 14px}
+.sc-d{padding:30px 24px;row-gap:18px}
+.steps{gap:48px;margin-top:72px}
+.steps li{padding-top:20px;gap:14px}
+.ab-grid{row-gap:44px}
+.ab-tx{gap:26px}
+.ab-bio{font-size:19px;line-height:1.5}
+.ct-card{padding:32px 24px;row-gap:48px}
+.crow{row-gap:44px}
+.cform{gap:26px}
+.cf{gap:10px}
+.cf input,.cf textarea{padding:8px 0 14px}
+.sf{padding-top:88px}
+.sf-top{row-gap:44px}
+.sf-col{gap:12px}
+.sf-col a{font-size:16px}
+.sf-wm{margin:88px 0 28px}
+.sf-bot{gap:16px;padding-top:18px}
+}

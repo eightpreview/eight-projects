@@ -37,7 +37,7 @@ const shatter=(tl,at)=>{const O=L.filter((_,i)=>i!==gi),G=L[gi];
   return tl};
 gsap.set(L,{transformOrigin:'50% 50%',opacity:0,y:18});const hn=[$('.hn-k'),...$$('.hn-l a'),$('.hn-idea')];gsap.set(hn,{opacity:0,y:24});
 const cnt={v:0};
-const tl=gsap.timeline({onComplete:()=>{intro.remove();ScrollTrigger.refresh()}});
+const tl=gsap.timeline({onComplete:()=>{intro.remove();ScrollTrigger.refresh()}});setTimeout(()=>H.classList.add('ready'),12000);
 const ih=[$('.ic',intro),num,$('.ib',intro)];
 tl.from(ih,{opacity:0,y:-10,duration:.6,stagger:.08});
 const heroEl=$('.hero');heroEl.classList.add('shat');const MIX=['#0f2257','#ff6a1a','#ff3d6b','#ffd23f'];const paint=(l,v)=>[l,...l.querySelectorAll('*')].forEach(e=>v?e.style.setProperty('fill',v,'important'):e.style.removeProperty('fill'));L.forEach((l,i)=>paint(l,MIX[i%4]));
