@@ -446,3 +446,19 @@ body{line-height:1.6}
 .sf-top>:nth-child(3){grid-column:1/-1;order:5}
 .sf-col a{overflow-wrap:anywhere}
 }
+
+/* ---- Mobile : barre de navigation unifiée (hero + défilement) ---- */
+@media (max-width:899px){
+.nb{top:10px;height:54px;padding:0 5px 0 18px;border-radius:16px;transform:none;border:1px solid transparent;color:#fff;
+  transition:background .4s,border-color .4s,box-shadow .4s,opacity .6s var(--e),visibility .6s}
+.nb .nb-logo{opacity:1;background:#fff;filter:none}
+/* hero : barre transparente, bouton rond en verre bien visible */
+.nb .nb-m{margin:0;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.4);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:#fff;transition:background .3s,border-color .3s}
+/* après le hero : barre sombre pleine, lisible sur toutes les sections */
+.nb.nb-on{background:rgba(5,10,36,.98);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);color:#fff;border-color:rgba(255,255,255,.12);box-shadow:0 12px 34px -16px rgba(5,10,36,.7)}
+.nb.nb-on .nb-logo{background:#fff}
+.nb.nb-on .nb-m{background:transparent;border-color:transparent}
+.mopen .nb,.mopen .nb.nb-on{background:var(--ink);border-color:rgba(255,255,255,.2)}
+.mopen .nb .nb-m{background:transparent;border-color:transparent}
+}
