@@ -379,3 +379,10 @@ background-size:auto!important;background-position:0 0!important}
 .hn-ec:hover{color:var(--navy);background:#fff;border-color:#fff}
 @media (max-width:899px){.hn-r{grid-column:2}}
 .hn-r .hn-ec{order:2}
+
+/* ---- Mobile : aucun défilement horizontal ---- */
+html{overflow-x:hidden;max-width:100%}
+body{overflow-x:hidden;max-width:100%;position:relative}
+main,section,footer{max-width:100%}
+.works{overflow-x:clip;overflow-y:visible}
+img,video,svg{max-width:100%}
