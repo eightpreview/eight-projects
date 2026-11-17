@@ -462,3 +462,8 @@ body{line-height:1.6}
 .mopen .nb,.mopen .nb.nb-on{background:var(--ink);border-color:rgba(255,255,255,.2)}
 .mopen .nb .nb-m{background:transparent;border-color:transparent}
 }
+
+/* ---- Contact : petits pois régulièrement espacés, jamais coupés (haut/bas/gauche/droite) ---- */
+@media (max-width:899px){
+.contact{background-size:30px 30px!important;background-repeat:space!important;background-position:50% 50%!important}
+}
