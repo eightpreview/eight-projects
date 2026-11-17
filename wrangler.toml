@@ -1,0 +1,15 @@
+name = "eight-projects"
+pages_build_output_dir = "public"
+compatibility_date = "2026-11-01"
+
+# Base de données de l'espace client.
+# En local, database_id n'est pas utilisé. En production : `wrangler d1 create eightprojects-db`, puis coller l'id ici.
+[[d1_databases]]
+binding = "DB"
+database_name = "eightprojects-db"
+database_id = "c91e4961-bea6-4d63-88ed-4d1078674214"
+
+# Fichiers privés (dépôt de documents). À DÉCOMMENTER après activation de R2 + `wrangler r2 bucket create eightprojects-files`
+# [[r2_buckets]]
+# binding = "BUCKET"
+# bucket_name = "eightprojects-files"

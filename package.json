@@ -1,0 +1,14 @@
+{
+  "name": "eightprojects-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler pages dev --port 8788",
+    "db:init": "wrangler d1 execute eightprojects-db --local --file=schema.sql",
+    "db:seed": "node scripts/seed.mjs && wrangler d1 execute eightprojects-db --local --file=seed.local.sql",
+    "db:init:remote": "wrangler d1 execute eightprojects-db --remote --file=schema.sql"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
