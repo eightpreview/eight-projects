@@ -421,3 +421,28 @@ body{line-height:1.6}
 .sf-wm{margin:88px 0 28px}
 .sf-bot{gap:16px;padding-top:18px}
 }
+
+/* ---- Mobile : bouton hamburger ---- */
+.nb-m{position:relative;width:44px;height:44px;padding:0;margin:0 -4px 0 0;border:0;background:transparent;color:inherit;font-size:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.nb-m .bars{position:absolute;left:50%;top:50%;width:22px;height:14px;transform:translate(-50%,-50%)}
+.nb-m .bars i{position:absolute;left:0;right:0;height:1.5px;border-radius:2px;background:currentColor;transition:transform .45s var(--e),opacity .25s,top .45s var(--e)}
+.nb-m .bars i:nth-child(1){top:0}.nb-m .bars i:nth-child(2){top:6.25px}.nb-m .bars i:nth-child(3){top:12.5px}
+.mopen .nb-m .bars i:nth-child(1){top:6.25px;transform:rotate(45deg)}
+.mopen .nb-m .bars i:nth-child(2){opacity:0}
+.mopen .nb-m .bars i:nth-child(3){top:6.25px;transform:rotate(-45deg)}
+@media (max-width:899px){
+.nb{padding:0 8px 0 16px}
+/* barre toujours lisible au défilement */
+.nb.nb-on{background:rgba(246,246,244,.92);color:var(--ink)}
+.nb.nb-on .nb-logo{opacity:1}
+.mopen .nb,.mopen .nb.nb-on{background:var(--ink);color:#fff}
+/* Contact : motif de points centré, sans coupure à droite */
+.contact{background-size:calc(100% / 13) calc(100vw / 13)!important;background-position:50% 0!important;overflow-x:clip}
+}
+@media (max-width:899px){
+.nb.nb-on{background:rgba(246,246,244,.97)}
+/* Pied de page : l'e-mail ne déborde plus */
+.sf-top>.sf-col{min-width:0}
+.sf-top>:nth-child(3){grid-column:1/-1;order:5}
+.sf-col a{overflow-wrap:anywhere}
+}

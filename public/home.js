@@ -27,7 +27,7 @@ if(tile){const im=$$('.h-img img',tile),nm=$('.h-name',tile),ix=$('.h-ix',tile),
 
 /* menu (mobile) */
 const mb=$('.nb-m');
-const setMenu=o=>{H.classList.toggle('mopen',o);mb.setAttribute('aria-expanded',o);mb.textContent=o?'Fermer':'Menu';D.body.style.overflow=o?'hidden':''};
+const setMenu=o=>{H.classList.toggle('mopen',o);mb.setAttribute('aria-expanded',o);mb.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');D.body.style.overflow=o?'hidden':''};
 if(mb){mb.addEventListener('click',()=>setMenu(!H.classList.contains('mopen')));
   $$('.menu a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
   D.addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false)})}
